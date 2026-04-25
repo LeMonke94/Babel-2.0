@@ -1,0 +1,67 @@
+{
+  // Visit https://aka.ms/tsconfig to read more about this file
+
+  "compilerOptions": {
+
+    // Project Structure
+    // Defines where TypeScript reads source files from and where compiled ouptut is written
+    "rootDir": "./src",
+    "outDir": "./dist",
+
+    // Runtime Environment
+    // Defines the JavaScript version and runtime APIs aviable for the project
+    "target": "es2025",
+    "lib": ["es2025"],
+
+    // Module System & Resolution
+    // Uses Node.js's modern ESM/CommonJS behaviour
+    // Requires package.json to define "type": "module" for ESM-projects
+    "module": "NodeNext",
+    "moduleResolution": "NodeNext",
+    "moduleDetection": "force",
+    "esModuleInterop": true,
+    "resolveJsonModule": true,
+
+    // Use only when you want to explicitly control included ambient types
+    // Example: ["node"] or ["vitest/globals"].
+    //"types": [],
+
+    // Emit Output
+    // Controls additional files generated alongside JavaScript output
+    "sourceMap": true,
+    "declaration": false,
+    "declarationMap": false,
+
+    // Type Safety
+    // Enables strict type-checking and catches common unsafe patterns
+    "strict": true,
+    "noUncheckedIndexedAccess": true,
+    "exactOptionalPropertyTypes": false,
+    "forceConsistentCasingInFileNames": true,
+
+    // Module Safety
+    // Keeps import/export behaviour predictable, especially for ESM projects
+    "isolatedModules": true,
+    "verbatimModuleSyntax": true,
+    "noUncheckedSideEffectImports": true,
+
+    // Code Quality
+    // Enforces basic correctness rules during type-checking
+    "noImplicitReturns": true,
+    "noUnusedLocals": true,
+    "noFallthroughCasesInSwitch": true,
+
+    // Compiler Performance / Compatibility
+    // Skips type-checking declaration files from dependencies
+    "skipLibCheck": true,
+
+    // Frontend / JSX
+    // Enable only for React/JSX projects
+    // "jsx": "react-jsx",
+
+  },
+
+  "include": ["src/**/*"],
+  "exclude": ["node_modules", "dist", "**/*.test.ts"]
+
+}
