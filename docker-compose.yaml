@@ -14,7 +14,6 @@ services:
   # Service for DB
   db:
     image: postgres:18
-    container_name: databaseContainer
     restart: always
 
     environment:

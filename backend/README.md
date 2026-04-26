@@ -27,6 +27,9 @@ Validator - Zod
 2. prisma.config.ts:
     paths for schema / migrations / db that prisma will use
 
+    npx prisma migrate dev --name init
+    npx prisma generate
+
 
 
 on character display it will calculate the stats from CharacterStat model, and then add the bonuses to the baseline stats from a file:
