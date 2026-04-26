@@ -1,0 +1,35 @@
+# Name of the Docker Compose project
+# Groups up all containers bolinging to the project
+name: babel-2.0
+
+# Container definitions
+services:
+
+  # Service for frontend
+  # ...
+
+  # Service for backend
+  # ...
+
+  # Service for DB
+  db:
+    image: postgres:18
+    container_name: databaseContainer
+    restart: always
+
+    environment:
+      POSTGRES_USER: ${POSTGRES_USER}           # creates User in postgres
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}   # password for User
+      POSTGRES_DB: ${POSTGRES_DB}               # creates database on startup
+
+    ports:
+    # host:container | port mapping
+      - '5432:5432'
+
+    volumes:
+    # host_path:container_path | data save mapping
+      - 'postgres_data_volume:/var/lib/postgresql'
+
+# Volumes for the services
+volumes:
+  postgres_data_volume:
