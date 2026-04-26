@@ -1,8 +1,14 @@
-// Generator
+// Generators
 generator client {
   provider = "prisma-client"
   output   = "../../src/generated/prisma"
   moduleFormat = "esm"
+}
+
+generator erd {
+  provider = "prisma-erd-generator"
+  theme = "forest"
+  output = "../../docs/diagramms/erd.md"
 }
 
 // Datasource

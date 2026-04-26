@@ -10,13 +10,19 @@ Framework - Express
 Database ORM - Prisma + Postgres
 Validator - Zod
 
-# Mental Model Notes for clarification
-    1. Type definitions are only needed at compile time -> Dev Dependencies
-    2. prisma is just the "toolbox" -> Dev @prisma/client is for the Postgres queries -> regular Dependency
-    
-    Prisma
-    1. schema.prisma:
-        generator client -> erzeuge ein client für das schema im output ...
-        datasource db -> dialekt bestimmung für kommunikation mit db
-    2. prisma.config.ts:
-        pfade für prisma schema/migrations/db
+
+
+# Mental Models / Notes for understanding
+
+## Package.json
+1. TypeScript Type definitions are only needed at compile time -> Dev Dependencies
+2. prisma is the CLI and the engine that builds my custom type-safe database library from my schemas -> Dev Dependency
+3. @prisma/client is the frame with the basics that gets filled by prisma with my custom database library later -> Dependency
+
+## Prisma
+1. schema.prisma:
+    generator client:   create a client for my defined schema and place it in the output location
+    datasource db:      defines the dialect for the database communication
+
+2. prisma.config.ts:
+    paths for schema / migrations / db that prisma will use
