@@ -26,3 +26,33 @@ Validator - Zod
 
 2. prisma.config.ts:
     paths for schema / migrations / db that prisma will use
+
+
+
+on character display it will calculate the stats from CharacterStat model, and then add the bonuses to the baseline stats from a file:
+    
+    em                      Int
+    critRate                Float
+    critDamage              Float
+    healingBonus            Float
+    incomingHealingBonus    Float
+    er                      Float
+    cdReduction             Float
+    shieldStrength          Float
+
+    pyroDmgBonus            Float
+    pyroRes                 Float
+    hydroDmgBonus           Float
+    hydroRes                Float
+    dendroDmgBonus          Float
+    dendroRes               Float
+    electroDmgBonus         Float
+    electroRes              Float
+    anemoDmgBonus           Float
+    anemoRes                Float
+    cryoDmgBonus            Float
+    cryoRes                 Float
+    geoDmgBonus             Float
+    geoRes                  Float
+    physicalDmgBonus        Float
+    physicalRes             Float

@@ -1,0 +1,44 @@
+// Regions
+enum Region {
+    Fontaine
+    Inazuma
+    Liyue
+    Mondstadt
+    Natlan
+    Nod_Krai
+    Snezhnaya
+    Sumeru
+}
+
+// Elements
+enum Element {
+    Anemo
+    Cryo
+    Dendro
+    Electro
+    Geo
+    Hydro
+    Pyro
+}
+
+// Roles
+enum Role {
+    Dps
+    SubDps
+    Support
+}
+
+// Weapons
+enum WeaponType {
+    Bow
+    Catalyst
+    Claymore
+    Polearm
+    Sword
+}
+
+// Ascention Stats
+enum AscensionStat {
+    CritRate
+    CritDamage
+}

@@ -1,0 +1,34 @@
+// Character, Weapon, Material
+
+// Character Model
+model Character {
+    id                  Int      @id @default(autoincrement())
+    name                String   @unique
+    rarity              Int
+    description         String
+    affiliation         String
+    region              Region
+    element             Element
+    role                Role
+    weaponType          WeaponType
+    ascensionStattype   AscensionStat
+
+    characterStats      CharacterStat[]
+    users               UserCharacter[]
+}
+
+// Character Stat Model
+model CharacterStat {
+    id                      Int         @id @default(autoincrement())
+    characterId             Int
+    level                   Int
+    ascension               Int
+    hp                      Int
+    atk                     Int
+    def                     Int
+    ascensionStatValue      Float
+
+    character               Character   @relation(fields: [characterId], references: [id], onDelete: Cascade)
+
+    @@unique([characterId, level, ascension])
+}
