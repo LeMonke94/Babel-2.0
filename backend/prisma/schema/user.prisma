@@ -1,0 +1,9 @@
+// User Model
+model User {
+    id          String      @id @default(cuid(2))
+    email       String      @unique
+    username    String      @unique
+    password    String
+    createdAt   DateTime    @default(now())
+    updatedAt   DateTime    @updatedAt
+}
